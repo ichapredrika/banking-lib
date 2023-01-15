@@ -47,3 +47,10 @@ func NewAuthorizationError(message string) *AppError {
 		Code:    http.StatusForbidden,
 	}
 }
+
+func NewBadRequest(message string) *AppError {
+	return &AppError{
+		Message: message,
+		Code:    http.StatusBadRequest,
+	}
+}
